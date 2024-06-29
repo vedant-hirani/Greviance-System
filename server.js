@@ -14,8 +14,7 @@ const mongoURI = 'mongodb://localhost:27017/mydatabase';
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true, // Add this line if you are using an older version of Mongoose (<6.x)
-  // remove `useCreateIndex: true` and `createIndexes: true` if using Mongoose >=6.x
+  useCreateIndex: true,
 });
 
 mongoose.connection.on('connected', () => {
